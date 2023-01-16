@@ -94,11 +94,10 @@
         </ul>
     </nav>
     <!-- End Side Nav -->
-
     <!-- Start Content -->
     <div class="content add-new-emp">
-        <form action="">
-            <h3 class="text-center mb-4 fw-bold">طلبات الشراء</h3>
+        <form action="" id="div-before">
+            <h3 class="text-center mb-4 fw-bold">شاشة تخريد الأصل</h3>
             <div class="box">
                 <div style="display: flex; flex-direction: column;" class="row">
                     <div style="display: flex; justify-content: space-between; margin: 0 40px;" class="col-md-7 pt-4">
@@ -106,33 +105,42 @@
                             <button class="btn primary-btn" type="submit">حفظ</button>
                         </div>
                         <div class="form-group d-flex align-items-center">
-                            <a href="add_supp.html" class="btn secondary-btn">تحويل الى أمر شراء</a>
+                            <a href="" class="btn secondary-btn">ترحيل</a>
                         </div>
                     </div>
                     <div class="col-md-10 pt-4">
                         <div class="form-group d-flex align-items-center">
-                            <label for="">التاريخ</label>
+                            <label for="">الأصل</label>
+                            <select>
+                                <option>يتم جلب الخيارات من اصول الشجرة</option>
+                            </select>
+                            <label for="">تاريخ التخريد</label>
                             <input type="date" class="form-control">
-                            <label for="">القسم</label>
-                            <input type="text" class="form-control">
+                            <label for="">الوصف</label>
+                            <input type="text" class="form-control" placeholder="تخريد ارض الملقا">
                         </div>
                         <div class="form-group d-flex align-items-center">
-                            <label for="">رقم الطلب</label>
-                            <input type="text" class="form-control">
-                            <label for="">الغرض</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group d-flex align-items-center" id="div-before">
-                            <label for="">المواد المطلوبة</label>
-                            <input type="text" class="form-control">
-                            <label for="">الكمية</label>
+                            <label for="">قيمة الأصل</label>
+                            <input type="number" class="form-control">
+                            <label for="">تاريخ الاستحواذ</label>
+                            <input type="date" class="form-control">
+                            <label for="">مجمع الإهلاك</label>
                             <input type="number" class="form-control">
                         </div>
-                        <i style="color: #001bb7; font-size: 18px;" class="bi bi-plus-square-fill plus-icon"></i>
-                        <div class="form-group d-flex align-items-center mt-5">
-                            <label for="">موافقة مدير قسم المشتريات</label>
-                            <label>موافقة مدير القسم المطلوب منه</label>
-                            <label for="">موافقة الادارة</label>
+                        <div class="form-group d-flex align-items-center">
+                            <label for="">قيمة الخسائر الرأسمالية</label>
+                            <input type="number" class="form-control">
+                            <label for="">عمر الاصل</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group d-flex align-items-center">
+                            <label for="">قيمة الخردة</label>
+                            <input type="number" class="form-control">
+                            <label for="">تاريخ التشغيل</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div style="margin: 0 40px;" class="form-group d-flex align-items-center">
+                        <button type="button" class="btn secondary-btn plus-icon">اضافة مركز تكلفة في حال وجودها</button>
                         </div>
                     </div>
                 </div>
@@ -145,7 +153,8 @@
         <!-- custom scripts -->
         <script>
             $('.plus-icon').on('click', function() {
-                $('#div-before').after('<div class="form-group d-flex align-items-center"><label for="">المواد المطلوبة</label><input type="text" class="form-control"><label for="">الكمية</label><input type="number" class="form-control"></div>');
+                $('#div-before').after('<table class="table"><thead><tr><th scope="col">مركز التكلفة</th><th scope="col">المبلغ</th><th scope="col">النسبة %</th></tr></thead><tbody><tr><th scope="row">المالية</th><td><input type="number" class="form-control">  </td><td><input type="number" class="form-control"></td></tr><tr><th scope="row">المشتريات</th><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr><th scope="row">اجمالي</th><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr>');
+                $(this).addClass('displaynone');
             });
         </script>
 </body>

@@ -98,7 +98,7 @@
     <!-- Start Content -->
     <div class="content add-new-emp">
         <form action="">
-            <h3 class="text-center mb-4 fw-bold">طلبات الشراء</h3>
+            <h3 class="text-center mb-4 fw-bold">شاشة أمر الشراء</h3>
             <div class="box">
                 <div style="display: flex; flex-direction: column;" class="row">
                     <div style="display: flex; justify-content: space-between; margin: 0 40px;" class="col-md-7 pt-4">
@@ -106,7 +106,7 @@
                             <button class="btn primary-btn" type="submit">حفظ</button>
                         </div>
                         <div class="form-group d-flex align-items-center">
-                            <a href="add_supp.html" class="btn secondary-btn">تحويل الى أمر شراء</a>
+                            <a href="purchase_inv.html" class="btn secondary-btn">الاستلام وإنشاء فاتورة</a>
                         </div>
                     </div>
                     <div class="col-md-10 pt-4">
@@ -122,17 +122,50 @@
                             <label for="">الغرض</label>
                             <input type="text" class="form-control">
                         </div>
-                        <div class="form-group d-flex align-items-center" id="div-before">
+                        <div class="form-group d-flex align-items-center">
+                            <label for="">رقم أمر الشراء</label>
+                            <input type="text" class="form-control">
+                            <label for="">تعيين المورد</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div style="margin: 0 20px;" class="form-group d-flex align-items-center" id="div-before">
                             <label for="">المواد المطلوبة</label>
                             <input type="text" class="form-control">
                             <label for="">الكمية</label>
                             <input type="number" class="form-control">
+                            <label for="">الوحدة</label>
+                            <input type="text" class="form-control">
+                            <label for="">سعر الوحدة</label>
+                            <input type="number" class="form-control">
+                            <label for="">الاجمالي</label>
+                            <input type="number" class="form-control">
                         </div>
                         <i style="color: #001bb7; font-size: 18px;" class="bi bi-plus-square-fill plus-icon"></i>
+                        <div class="form-group d-flex align-items-center" style="margin-top: 20px;">
+                            <label for="">الإجمالي قبل الضريبة</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group d-flex align-items-center" style="margin-top: 20px;">
+                            <label for="">  الضريبة</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group d-flex align-items-center" style="margin-top: 20px;">
+                            <label for="">الإجمالي بعد الضريبة</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group d-flex align-items-center col-md-6">
+                            <label for="">يتم تعيين المستلم</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group d-flex align-items-center col-md-6">
+                            <label for="">يتم تعيين المستودع</label>
+                            <input type="text" class="form-control">
+                        </div>
                         <div class="form-group d-flex align-items-center mt-5">
                             <label for="">موافقة مدير قسم المشتريات</label>
-                            <label>موافقة مدير القسم المطلوب منه</label>
-                            <label for="">موافقة الادارة</label>
+                            <label>موافقة مدير القسم المطلوب </label>
+                            <label for="">موافقة المالية</label>
+                            <label for="">موافقة الإدارة</label>
                         </div>
                     </div>
                 </div>
@@ -145,7 +178,7 @@
         <!-- custom scripts -->
         <script>
             $('.plus-icon').on('click', function() {
-                $('#div-before').after('<div class="form-group d-flex align-items-center"><label for="">المواد المطلوبة</label><input type="text" class="form-control"><label for="">الكمية</label><input type="number" class="form-control"></div>');
+                $('#div-before').after('<div style="margin: 0 20px;" class="form-group d-flex align-items-center"><label for="">المواد المطلوبة</label><input type="text" class="form-control"><label for="">الكمية</label><input type="number" class="form-control"><label for="">الوحدة</label><input type="text" class="form-control"><label for="">سعر الوحدة</label><input type="number" class="form-control"><label for="">الاجمالي</label><input type="number" class="form-control"></div>');
             });
         </script>
 </body>
