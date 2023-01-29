@@ -100,11 +100,11 @@
             <h3 class="text-center mb-4 fw-bold">عمليات على الأصل</h3>
             <div class="box">
                 <div style="display: flex; flex-direction: column;" class="row">
-                    <div style="display: flex; justify-content: space-between; margin: 0 40px;" class="col-md-7 pt-4">
+                    <div style="display: flex; margin: 0 40px;" class="col-md-7 pt-4">
                         <div class="form-group d-flex align-items-center">
                             <button class="btn primary-btn" type="submit">حفظ</button>
                         </div>
-                        <div class="form-group d-flex align-items-center">
+                        <div style="margin-right: 10px;" class="form-group d-flex align-items-center">
                             <a href="" class="btn secondary-btn">ترحيل</a>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <input type="date" class="form-control">
                         </div>
                         <div style="margin: 0 40px;" class="form-group d-flex align-items-center">
-                        <button type="button" class="btn secondary-btn plus-icon">اضافة مركز تكلفة</button>
+                            <button type="button" class="btn secondary-btn plus-icon">اضافة مركز تكلفة</button>
                         </div>
                     </div>
                 </div>
@@ -153,13 +153,13 @@
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
-       <!-- custom scripts -->
-       <script>
-        $('.plus-icon').on('click', function() {
-            $('#div-before').after('<table class="table"><thead><tr><th scope="col">مركز التكلفة</th><th scope="col">المبلغ</th><th scope="col">النسبة %</th></tr></thead><tbody><tr><th scope="row">المالية</th><td><input type="number" class="form-control">  </td><td><input type="number" class="form-control"></td></tr><tr><th scope="row">المشتريات</th><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr><th scope="row">اجمالي</th><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr>');
-            $(this).addClass('displaynone');
-        });
-    </script>
+        <!-- custom scripts -->
+        <script>
+            $('.plus-icon').on('click', function() {
+                $('#div-before').after('<table class="table"><thead><tr><th scope="col">مركز التكلفة</th><th scope="col">المبلغ</th><th scope="col">النسبة %</th></tr></thead><tbody><tr><th scope="row">المالية</th><td><input type="number" class="form-control">  </td><td><input type="number" class="form-control"></td></tr><tr><th scope="row">المشتريات</th><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr><th scope="row">اجمالي</th><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr>');
+                $(this).addClass('displaynone');
+            });
+        </script>
 </body>
 
 </html>

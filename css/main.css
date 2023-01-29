@@ -859,3 +859,24 @@ select {
         min-width: 8.5rem;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+    }
+    .btn-group-three {
+        flex-direction: column;
+    }
+    .search-btn {
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .btn-group-three {
+        justify-content: space-between;
+    }
+    .search-btn {
+        margin-right: 15px;
+    }
+}
